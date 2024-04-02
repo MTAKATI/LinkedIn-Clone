@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= v, initial-scale=1.0">
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="../Presentation Layer/nav.css">
+    <link rel="stylesheet" href="../Presentation Layer/leftSidebar.css">
+    <link rel="stylesheet" href="../Presentation Layer/rightSidebar.css">
+    <link rel="stylesheet" href="../Presentation Layer/content.css">
+    <link rel="stylesheet" href="../Presentation Layer/profileDropDown.css"> 
+    <link rel="stylesheet" href="../Responsiveness/mediaQueries.css">
+    <!-- CSS LINKS ENDS HERE-->
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="../Content Layer/index.html" class="logo">
+                <img src="../Resources/images/logo.png" alt="">
+            </a>
+
+            <div class="search-box">
+                <img src="../Resources/images/search.png" alt="">
+                <input type="text" placeholder="search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="../Content Layer/index.html" class="active-link"><img src="../Resources/images/home.png" alt=""> <span>Home</span></a></li>
+                <li><a href="#"><img src="../Resources/images/network.png" alt=""> <span>My Network</span></a></li>
+                <li><a href="#"><img src="../Resources/images/jobs.png" alt=""> <span>Jobs</span></a></li>
+                <li><a href="#"><img src="../Resources/images/message.png" alt=""> <span>Messaging</span></a></li>
+                <li><a href="#"><img src="../Resources/images/notification.png" alt=""> <span>Notifications</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="../Resources/images/user-1.png" class="nav-profile-img" alt="" onclick="toggleMenu()">
+            </div>
+        </div>
+
+        <!-- profile-drop-down-menu -->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="../Resources/images/user-1.png" alt="">
+                    <div>
+                        <h3>Sandiso Mtakati</h3>
+                        <a href="../Content Layer/profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="../Resources/images/feedback.png" alt="">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="../Resources/images/setting.png" alt="">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="../Resources/images/help.png" alt="">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="../Resources/images/display.png" alt="">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="../Resources/images/logout.png" alt="">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- NAVBAR ENDS -->
+
+    <div class="container">
+        <!-- left sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="../Resources/images/cover-pic.png" width="100%" alt="">
+                <div class="sidebar-profile-info">
+                    <img src="../Resources/images/user-1.png" alt="">
+                    <h1>Sandiso Mtakati</h1>
+                    <h3>Web Developer at Microsoft</h3>
+                    <ul>
+                        <li>Your profile views <span>52</span></li>
+                        <li>Your post views <span>102</span></li>
+                        <li>Your pconnections <span>205</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><img src="../Resources/images/items.png" alt="">My items</a>
+                    <a href="#"><img src="../Resources/images/premium.png" alt="">Try Premium</a>
+                </div>
+            </div>
+
+            <div class="sidebar-activity" id="sidebarActivity">
+                <h3>RECENT</h3>
+                <a href="#"><img src="../Resources/images/recent.png"> Web Development</a>
+                <a href="#"><img src="../Resources/images/recent.png"> User Interface</a>
+                <a href="#"><img src="../Resources/images/recent.png"> Online Learning</a>
+                <a href="#"><img src="../Resources/images/recent.png"> Learn Online</a>
+                <a href="#"><img src="../Resources/images/recent.png"> Code Better</a>
+                <a href="#"><img src="../Resources/images/recent.png"> Group Learning</a>
+                <h3>GROUPS</h3>
+                <a href="#"><img src="../Resources/images/group.png" alt=""> Web Design Group</a>
+                <a href="#"><img src="../Resources/images/group.png" alt=""> HTML & CSS Learners</a>
+                <a href="#"><img src="../Resources/images/group.png" alt=""> Python & JavaScript Group</a>
+                <a href="#"><img src="../Resources/images/group.png" alt=""> Learn Coding Online</a>
+                <h3>HASHTAG</h3>
+                <a href="#"><img src="../Resources/images/hashtag.png" alt=""> webdevelopment</a>
+                <a href="#"><img src="../Resources/images/hashtag.png" alt=""> userinterface</a>
+                <a href="#"><img src="../Resources/images/hashtag.png" alt=""> onlinelearning</a>
+
+                <div class="discover-more-link">
+                    <a href="#">Discover more</a>
+                </div>
+            </div>
+
+            <p id="showMoreLink" onclick="toggleActivity">Show more <b>+</b></p>
+        </div>
+
+        <!-- main content -->
+        <div class="main-content">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="../Resources/images/user-1.png">
+                    <textarea rows="2" placeholder="Write a post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="../Resources/images/photo.png">Photo</li>
+                    <li><img src="../Resources/images/video.png">Video</li>
+                    <li><img src="../Resources/images/event.png">Event</li>
+                    <li>Post</li>
+                </div>
+            </div>
+
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>top <img src="../Resources/images/down-arrow.png" alt=""></span></p>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="../Resources/images/user-3.png" alt="">
+                    <div>
+                        <h1>Sandiso Mtakati</h1>
+                        <small>Founder and CEO at Vortex Group| Innovator</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>The success of every website depends on search engine optimisation and
+                    digital marketing strategy. If you are on first page of all major search engines
+                    then you are ahead among your competitors.
+                </p>
+                <img src="../Resources/images/post-image-1.png" width="100%" alt="">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="../Resources/images/thumbsup.png">
+                        <img src="../Resources/images/logo.png">
+                        <img src="../Resources/images/clap.png">
+                        <span class="liked-users">Shantanu Narayen and 75 others</span>
+                    </div>
+
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <img src="../Resources/images/user-1.png" alt="" class="post-activity-user-icon">
+                        <img src="../Resources/images/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/like.png" alt="">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/comment.png" alt="">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/share.png" alt="">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/send.png" alt="">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="../Resources/images/user-4.png" alt="">
+                    <div>
+                        <h1>Georgina Boros</h1>
+                        <small>Founder and CEO at Vortex Group| Innovator</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>The success of every website depends on search engine optimisation and
+                    digital marketing strategy. If you are on first page of all major search engines
+                    then you are ahead among your competitors.
+                </p>
+                <img src="../Resources/images/post-image-2.png" width="100%" alt="">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="../Resources/images/thumbsup.png">
+                        <img src="../Resources/images/logo.png">
+                        <img src="../Resources/images/clap.png">
+                        <span class="liked-users">Shantanu Narayen and 75 others</span>
+                    </div>
+
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <img src="../Resources/images/user-1.png" alt="" class="post-activity-user-icon">
+                        <img src="../Resources/images/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/like.png" alt="">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/comment.png" alt="">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/share.png" alt="">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/send.png" alt="">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="../Resources/images/user-5.png" alt="">
+                    <div>
+                        <h1>Marcus Jooste</h1>
+                        <small>Founder and CEO at Vortex Group| Innovator</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>The success of every website depends on search engine optimisation and
+                    digital marketing strategy. If you are on first page of all major search engines
+                    then you are ahead among your competitors.
+                </p>
+                <img src="../Resources/images/post-image-4.png" width="100%" alt="">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="../Resources/images/thumbsup.png">
+                        <img src="../Resources/images/logo.png">
+                        <img src="../Resources/images/clap.png">
+                        <span class="liked-users">Shantanu Narayen and 75 others</span>
+                    </div>
+
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <img src="../Resources/images/user-1.png" alt="" class="post-activity-user-icon">
+                        <img src="../Resources/images/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/like.png" alt="">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/comment.png" alt="">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/share.png" alt="">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="../Resources/images/send.png" alt="">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- right sidebar -->
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="../Resources/images/more.png" alt="" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="#">Careers growing horizontally too</a>
+                <span>19d ago &middot; 1,552 readers</span>
+
+                <a href="#">Less work visa for US, more for UK</a>
+                <span>1d ago &middot; 27,290 readers</span>
+
+                <a href="#">More hiring = higher confidence</a>
+                <span>18d ago &middot; 8,208 readers</span>
+
+                <a href="#">Gautam Adani is the world's third richest</a>
+                <span>12d ago &middot; 4,205 readers</span>
+
+                <a href="#" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="sidebar-ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="../Resources/images/user-1.png" alt="">
+                    <img src="../Resources/images/mi-logo.png" alt="">
+                </div>
+                <b>Brand and Demand in Xiaomi</b>
+                <a href="#" class="ad-link">Learn More</a>
+            </div>
+
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+
+                <div class="copyright-msg">
+                    <img src="../Resources/images/logo.png" alt="">
+                    <p>Linkedup &#169; 2022. All right reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        
+        let profileMenu = document.getElementById("profileMenu");
+
+        function toggleMenu(){
+            profileMenu.classList.toggle("open-menu");
+        }
+
+    </script>
+
+    <script>
+
+        let sideActivity = document.getElementById("sidebarActivity");
+        let moreLink = document.getElementById("showMoreLink");
+
+        function toggleActivity(){
+            sideActivity.classList.toggle("open-activity");
+
+            if(sideActivity.classList.contains("open-activity")){
+                moreLink.innerHTML = "Show less <b>-</b>";
+            }
+            else{
+                moreLink.innerHTML = "Show less <b>+</b>"
+            }
+        }
+
+    </script>
+
+</body>
+</html>
